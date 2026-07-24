@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+  <meta content="VIM" name="description">
+  <link href="img/fav.png" rel="icon">
+  <link href="img/favicon.ico" rel="shortcut icon">
+  <link href="img/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+  <title>VIM</title>
+  <meta charset="utf-8"/>
+  <link rel="me" href="https://social.vivaldi.net/@bearsfactory">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0b0b0b">
+<style>
+    *{font-family:monospace}
+    details{display: block;margin:0;padding:0;padding-left:10px;padding-bottom:5px;margin-bottom:5px;padding-top:5px;margin-top:5px; border-bottom:1px dotted black;transition: .8s}
+    summary{display: block;margin:0;padding:0;cursor:pointer;width:100%;font-family:'Roboto','Noto Sans JP',"Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;font-weight: 600;font-size: 16px;outline: none;transition:.8s}
+    img{width:50px}
+    table tr{display:block; border-bottom:1px dotted gray;margin:10px 5px;padding-top:5px; padding-bottom:5px;font-size: 12px}
+    table tr:hover{background:#E0E0E0}
+    span.KEY{display: inline-block;padding: 2px 8px;min-width: 6px;height: 20px; text-decoration: none;color: white;background:black;background-image: -moz-linear-gradient(top, #888 0%, #777 50%, #666 50%, #777 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888), color-stop(0.50, #777), color-stop(0.50, #666), color-stop(1, #777));border-radius: 6px;box-shadow: inset 0 1px 0 gray, inset 0 -1px 0 gray;border: solid 0.5px #3F3F3F;font-size: 12px}
+    span.tip{border-radius:20px;background-color: red;padding:2px 10px;color: white}
+</style>
+</head>
+<body>
+    
+<img src="img/Vim.png" alt="Vim">
+    
+<!--- カーソルの移動 --->
+<details>
+  <summary>カーソルの移動</summary>
+          <table>
+            <tr>
+            <td><span class="KEY">h</span></td>
+            <td>左に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">j</span></td>
+            <td>下に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">k</span></td>
+            <td>上に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">l</span></td>
+            <td>右に移動</td>
+            </tr>
+            <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">e</span></td>
+                <td>画面を下に1行スクロール<br>（カーソル移動なし）</td>
+                </tr>
+                <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">y</span></td>
+                <td>画面を上に 1 行スクロール<br>（カーソル移動なし）</td>
+                </tr>
+                <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">b</span></td>
+                <td>画面全体分だけ上に移動</td>
+                </tr>
+                <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">f</span></td>
+                <td>画面全体分だけ下に移動</td>
+                </tr>
+                <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">d</span></td>
+                <td>画面半分だけ下に移動</td>
+                </tr>
+                <tr>
+                <td><span class="KEY">Ctrl</span> + <span class="KEY">u</span></td>
+                <td>画面半分だけ上に移動</td>
+                </tr>
+            <tr>
+            <td><span class="KEY">H</span></td>
+            <td>画面上部に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">M</span></td>
+            <td>画面中央に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">L</span></td>
+            <td>画面下部に移動</td>
+            </tr>
+            <td><span class="KEY">gg</span></td>
+            <td>画面最上部に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">G</span></td>
+            <td>画面最下部に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">w</span></td>
+            <td>次の単語の先頭に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">W</span></td>
+            <td>次の（区切り文字を含む）単語の先頭に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">e</span></td>
+            <td>次の単語の末尾に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">E</span></td>
+            <td>次の（区切り文字を含む）単語の末尾に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">b</span></td>
+            <td>前の単語の先頭に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">B</span></td>
+            <td>前の（区切り文字を含む）単語の先頭に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">%</span></td>
+            <td>対応するカッコに移動（標準でサポートしている組み合わせは: '()','{}','[]' - 詳細は:h matchpairsを参照）</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">0</span></td>
+            <td>行頭に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">^</span></td>
+            <td>その行で最初の非空白文字に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">$</span></td>
+            <td>行末に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">g</span> <span class="KEY">_</span></td>
+            <td>その行で最後の非空白文字に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">g</span> <span class="KEY">g</span></td>
+            <td>ドキュメントの先頭行に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">G</span></td>
+            <td>ドキュメントの末尾行に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">5</span> <span class="KEY">g</span> <span class="KEY">g</span> or <span class="KEY">5</span> <span class="KEY">G</span></td>
+            <td>5行目に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">g</span> <span class="KEY">d</span></td>
+            <td>move to local declaration</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">g</span> <span class="KEY">D</span></td>
+            <td>move to global declaration</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">f</span> <span class="KEY">x</span></td>
+            <td>次にある文字「x」の手前に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">t</span> <span class="KEY">x</span></td>
+            <td>次にある文字「x」の 1 つ手前に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">F</span> <span class="KEY">x</span></td>
+            <td>前にある文字「x」の手前に移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">T</span> <span class="KEY">x</span></td>
+            <td>前にある文字「x」の 1 つ後ろに移動</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">;</span></td>
+            <td>直前の f, t, F, T を繰り返し</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">,</span></td>
+            <td>直前の f, t, F, T を反対にして繰り返し</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">}</span></td>
+            <td>次の段落に移動（コード編集中の場合は関数/ブロック）</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">{</span></td>
+            <td>前の段落に移動（コード編集中の場合は関数/ブロック）</td>
+            </tr>
+            <tr>
+            <td><span class="KEY">z</span> <span class="KEY">z</span></td>
+            <td>カーソル位置を画面中央に</td>
+            </tr>
+          </table>
+          <p><span class="tip">Tip</span> これらのコマンドの前に番号を付けるとその回数分繰り返します。例えば、4j は 4 行下に移動します。</p>
+</details>
+<!--- カーソルの移動 --->
+
+<!--- 消去・複製・貼付 --->
+<details>
+  <summary>消去・複製・貼付</summary>
+          <table>
+            <tr>
+              <td><span class="KEY">y</span> <span class="KEY">y</span> 行をヤンク</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">2</span> <span class="KEY">y</span> <span class="KEY">y</span> 2行をヤンク</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">y</span> <span class="KEY">w</span> 次の単語の始まりまでをヤンク</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">y</span> <span class="KEY">$</span> 行末までヤンク</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">p</span> カーソル位置の1つ後ろにペースト</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">P</span> カーソル位置の手前にペースト</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">d</span> <span class="KEY">d</span> 行を消去</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">2</span> <span class="KEY">d</span> <span class="KEY">d</span> 2行を消去</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">d</span> <span class="KEY">w</span> 次の単語の始まりまでを消去</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">D</span> 行末まで消去</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">d</span> <span class="KEY">$</span> 行末まで消去（<kbd>D</kbd>と同じ）</td>
+              </tr>
+              <tr>
+              <td><span class="KEY">x</span> 1文字消去</td>
+              </tr>
+          </table>
+</details>
+<!--- 消去・複製・貼付 --->
+
+<!--- テキストインデント --->
+<details>
+  <summary>テキストインデント</summary>
+          <table>
+            <tr>
+              <td><span class="KEY">></span> <span class="KEY">></span> その行を（右に）字下げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY"><</span> <span class="KEY"><</span> その行を（左に）字上げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">></span> <span class="KEY">%</span> () や {} のブロックを字下げ（カーソルが括弧にあるとき)</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">></span> <span class="KEY">i</span> <span class="KEY">b</span> () のブロックの内側を字下げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">></span> <span class="KEY">a</span> <span class="KEY">t</span> タグのブロックを字下げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">3</span> <span class="KEY">=</span> <span class="KEY">=</span> 3 行を再インデント</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">=</span> <span class="KEY">%</span> () や {} のブロックを再字下げ（カーソルが括弧にあるとき)</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">=</span> <span class="KEY">i</span> <span class="KEY">B</span> {} のブロックの内側を再字下げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">g</span> <span class="KEY">=</span> <span class="KEY">G</span> バッファ全体を再字下げ</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">]</span> <span class="KEY">p</span> ペーストして現在の行にインデントを揃える</span></td>
+              </tr>
+          </table>
+</details>
+<!--- テキストインデント --->
+
+<!--- 編集 --->
+<details>
+  <summary>編集</summary>
+          <table>
+            <tr>
+              <td><span class="KEY">r</span> 文字を1つだけ置き換える</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">J</span> スペースを1つ加えて下の行を現在の行に連結</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">J</span> スペースなしで現在の行に下の行を連結</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">w</span> <span class="KEY">i</span> <span class="KEY">p</span> 段落をすべて連結</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">~</span> モーション範囲の大文字小文字を切り替え</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">u</span> モーション範囲を小文字に</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">g</span> <span class="KEY">U</span> モーション範囲を大文字に</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">c</span> <span class="KEY">c</span> 現在の行を消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">C</span> カーソル位置から行末までを消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">c</span> <span class="KEY">$</span> カーソル位置から行末までを消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">c</span> <span class="KEY">i</span> <span class="KEY">w</span> 単語を全て消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">c</span> <span class="KEY">w</span> 単語をカーソル位置から末尾まで消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">s</span> カーソル位置の文字を消去して挿入モード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">S</span> 現在の行を消去して挿入モード（<kbd>cc</kbd>と同じ）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">x</span> <span class="KEY">p</span> 二文字の入れ替え（カットしてペースト）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">u</span> 取り消し（アンドゥ）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">U</span> 最後に変更した行を取り消し（アンドゥ）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">r</span> やり直し（リドゥ）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">.</span> 最後に使ったコマンドを繰り返し</span></td>
+              </tr>
+          </table>
+</details>
+<!--- 編集 --->
+
+<!--- テキスト選択（ビジュアルモード） --->
+<details>
+  <summary>テキスト選択（ビジュアルモード）</summary>
+          <table>
+            <tr>
+              <td><span class="KEY">v</span> ビジュアルモード開始。これで選択してからコマンド（ヤンクなど）を実行</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">V</span> 行単位のビジュアルモード</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">o</span> 選択範囲の反対側に移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">v</span> 矩形ビジュアル</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">O</span> 矩形の反対側の角に移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">a</span> <span class="KEY">w</span> 単語を選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">a</span> <span class="KEY">b</span> () のブロックを選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">a</span> <span class="KEY">B</span> {} のブロックを選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">a</span> <span class="KEY">t</span> &lt;&gt; タグのブロックを選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">i</span> <span class="KEY">b</span> () ブロックの括弧を除いた内側を選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">i</span> <span class="KEY">B</span> {} ブロックの括弧を除いた内側を選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">i</span> <span class="KEY">t</span> &lt;&gt; タグのブロックの括弧を除いた内側を選択</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Esc</span> ビジュアルモード終了</span></td>
+              </tr>
+          </table>
+          <p><span class="tip">Tip</span> b や B の代わりにそれぞれ ( や { も使えます。</p>
+</details>
+<!--- テキスト選択（ビジュアルモード） --->
+
+<!--- ビジュアルモードでのコマンド --->
+<details>
+  <summary>ビジュアルモードでのコマンド</summary>
+          <table>
+            <tr><td><span class="KEY">></span>	選択範囲を右に</td></tr>
+            <tr><td><span class="KEY"><</span>	選択範囲を左に</td></tr>
+            <tr><td><span class="KEY">y</span>	選択範囲をヤンク	</td></tr>
+            <tr><td><span class="KEY">d</span>	選択範囲を消去</td></tr>
+            <tr><td><span class="KEY">~</span>	大文字と小文字を入れ替え	</td></tr>
+            <tr><td><span class="KEY">u</span>	選択範囲を小文字に	</td></tr>
+            <tr><td><span class="KEY">U</span>	選択範囲を大文字に	</td></tr>
+          </table>
+</details>
+<!--- ビジュアルモードでのコマンド --->
+
+<!--- 複数のファイルでの作業 --->
+<details>
+  <summary>複数のファイルでの作業</summary>
+          <table>
+            <tr>
+              <td><span class="KEY">:e[dit]</span> file 新しいバッファでファイルを編集</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:bn[ext]</span> 次のバッファに移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:bp[revious]</span> 前のバッファに移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:bd[elete]</span> バッファを消去（ファイルを閉じる）</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:b[uffer]#</span> #番目のバッファに移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:b[uffer]</span> file fileという名前のバッファに移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:ls or :buffers</span> バッファのリストを開く</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:sp[lit] file</span> 新しいバッファの水平分割ウィンドウでファイルを開く</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:vs[plit] file</span> 新しいバッファの垂直分割ウィンドウでファイルを開く</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:vert[ical] ba[ll]</span> 全てのバッファを垂直分割ウインドウにして編集</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">:tab ba[ll]</span> 全てのバッファをタブにして編集</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">s</span> ウィンドウ分割</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">v</span> ウィンドウ垂直分割</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">w</span> ウィンドウ切り替え</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">q</span> ウィンドウ終了</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">x</span> 現在のウインドウを次のウインドウと入れ替え</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">=</span> 全てのウインドウを同じ高さと幅に</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">h</span> 右のウィンドウ（垂直分割）にカーソル移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">l</span> 左のウィンドウ（垂直分割）にカーソル移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">j</span> 下のウィンドウ（水平分割）にカーソル移動</span></td>
+              </tr>
+              <tr>
+              <td><span class="KEY">Ctrl</span> + <span class="KEY">w</span> <span class="KEY">k</span> 上のウィンドウ（水平分割）にカーソル移動</span></td>
+              </tr>
+          </table>
+</details>
+<!--- 複数のファイルでの作業 --->
+
+</body>
+</html>

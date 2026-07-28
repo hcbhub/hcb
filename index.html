@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>HCB portal</title>
+<title>HCB portal</title>
 <meta charset="utf-8"/>
 <link rel="me" href="https://social.vivaldi.net/@bearsfactory">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,11 +14,11 @@
 <style>
   @font-face {font-family: "さつき源代明朝 Medium";src: url(font/SatsukiGendaiMincho-M.woff)}  
   *{margin: 0;padding: 0}
-  body{margin: 0 auto;width: 60%;max-width: 960px}
+  html{font-size:clamp(16px,0.35vw + 10px,16px);}
+  body{margin: 0 auto;width: 80%;max-width: 960px;padding-top:30px;}
   h1,h2,h3,h4,h5,h6{
-	  font-family:"さつき源代明朝 Medium",'Roboto','Noto Sans JP',"Hiragino Kaku Gothic Pro", "Meiryo",sans-serif;font-weight: 500
+	font-family:'Roboto',"Hiragino Kaku Gothic Pro", "Meiryo",sans-serif;font-weight: 500
   }
-  h2{margin-top: 50px}
   #formWrap {
 	margin:0 auto;
 	color:#555;
@@ -59,20 +59,18 @@
   }
   
   @media screen and (max-width: 640px) {
-	body{width: 70%}
+	body{width: 80%}
   }
   
   @media screen and (max-width: 480px) {
-	body{width: 80%}
+	body{width: 90%}
 	h2{margin-top: 30px}
   }
 </style>
 </head>
 <body>
-<h2>HCB portal</h2>
-<h4>Ember Ignition Storage</h4>
-<hr style="margin:20px 0px 10px 0px">
-<a href="music.html">Music</a>　/　<a href="movie.html">Movie</a>　/　<a href="prophet.html">Prophet</a>　/　<a href="vim.html">Vim</a>　/　<a href="JunkMail.html" id="current">[迷]惑MAIL展示場</a>
-
+<h1>hcb</h1>
+<hr style="margin:0px 0px 10px 0px">
+<div><a href="music.html">Music</a>　/　<a href="movie.html">Movie</a>　/　<a href="prophet.html">Prophet</a>　/　<a href="vim.html">Vim</a></div>
 </body>
 </html>

@@ -1,76 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>HCB portal</title>
-<meta charset="utf-8"/>
-<link rel="me" href="https://social.vivaldi.net/@bearsfactory">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
-<meta name="color-scheme" content="light dark">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0b0b0b">
+	<meta charset="utf-8">
+	<title>project HCB</title>
+	<link rel="me" href="https://social.vivaldi.net/@bearsfactory">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
+	<meta name="color-scheme" content="light dark">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0b0b0b">
 <style>
-  @font-face {font-family: "さつき源代明朝 Medium";src: url(font/SatsukiGendaiMincho-M.woff)}  
-  *{margin: 0;padding: 0}
-  html{font-size:clamp(16px,0.35vw + 10px,16px);}
-  body{margin: 0 auto;width: 80%;max-width: 960px;padding-top:30px;}
-  h1,h2,h3,h4,h5,h6{
-	font-family:'Roboto',"Hiragino Kaku Gothic Pro", "Meiryo",sans-serif;font-weight: 500
-  }
-  #formWrap {
-	margin:0 auto;
-	color:#555;
-	line-height:120%;
-	font-size:90%;
-  }
-  table.formTable{
-	width:100%;
-	margin:0 auto;
-	border-collapse:collapse;
-  }
-  table.formTable td,table.formTable th{
-	border:1px solid #ccc;
-	padding:10px;
-  }
-  table.formTable th{
-	width:30%;
-	font-weight:normal;
-	background:#efefef;
-	text-align:left;
-	margin-top:5px;
-	border-bottom:0;
-  }
-  table.formTable th, table.formTable td {
-	width:auto;
-	display:block;
-  }
-  form input[type="text"], form textarea {
-	width:80%;
-	padding:5px;
-	font-size:110%;
-	display:block;
-  }
-  form input[type="submit"], form input[type="reset"], form input[type="button"] {
-	display:block;
-	width:100%;
-	height:40px;
-  }
-  
-  @media screen and (max-width: 640px) {
-	body{width: 80%}
-  }
-  
-  @media screen and (max-width: 480px) {
-	body{width: 90%}
-	h2{margin-top: 30px}
-  }
+	@font-face{font-family:"さつき源代明朝 Medium";src:url("font/SatsukiGendaiMincho-M.woff") format("woff");font-display:swap;}
+	*{box-sizing:border-box;margin:0;padding:0;}
+	body{display:flex;flex-direction:column;min-height:100vh;margin:0 auto;width:80%;max-width:960px;padding-top:10px;font-family:"さつき源代明朝 Medium",serif;}
+	body.dark{background-color:#222;color:#fff;}
+	body.dark a{color:#d6a567;}
+	h1,h2,h3,h4,h5,h6,button{font-family:"Hiragino Kaku Gothic Pro","Meiryo",sans-serif;font-weight:500;}
+	.modeChange{margin-bottom:10px;}
+	#modeBtn{display:block;margin-left:auto;appearance:none;-webkit-appearance:none;border:1px solid currentColor;border-radius:5px;background-color:#000;box-shadow:none;color:#fff;font-size:10px;line-height:1;padding:6px 10px;cursor:pointer;transition:background-color 0.3s ease,color 0.3s ease;}
+	#modeBtn:hover{background-color:#2f2f2f;}
+	#modeBtn:focus-visible{outline:2px solid currentColor;outline-offset:3px;}
+	body.dark #modeBtn{background-color:#ff0;color:#000;}
+	body.dark #modeBtn:hover{background-color:#e6e600;}
+	footer{margin-top:auto;padding-bottom:20px;text-align:center;}
+	@media screen and (max-width:480px){body{width:90%;}h2{margin-top:30px;}}
 </style>
 </head>
 <body>
-<h1>hcb</h1>
+	<div class="modeChange"><button id="modeBtn">Enter the Darkness</button></div>
+	<h1>hcb</h1>
+	<p style="font-size:14px;margin-bottom:10px;">Official web portal</p>
+	<script>
+		const modeBtn=document.getElementById('modeBtn');
+		
+		modeBtn.addEventListener('click',function(){
+		document.body.classList.toggle('dark');
+		const isDark=document.body.classList.contains('dark');
+		modeBtn.textContent=isDark?'Enter the Light':'Enter the Darkness';
+		});
+	</script>
 <hr style="margin:0px 0px 10px 0px">
 <div><a href="music.html">Music</a>　/　<a href="movie.html">Movie</a>　/　<a href="prophet.html">Prophet</a>　/　<a href="vim.html">Vim</a></div>
+<footer><small>© 2026 hcb</small></footer>
 </body>
 </html>

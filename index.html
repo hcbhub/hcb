@@ -1,48 +1,66 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
-	<meta charset="utf-8">
-	<title>project HCB</title>
-	<link rel="me" href="https://social.vivaldi.net/@bearsfactory">
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<link rel="icon" href="/favicon.ico" sizes="any">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
-	<meta name="color-scheme" content="light dark">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0b0b0b">
-<style>
-	@font-face{font-family:"さつき源代明朝 Medium";src:url("font/SatsukiGendaiMincho-M.woff") format("woff");font-display:swap;}
-	*{box-sizing:border-box;margin:0;padding:0;}
-	body{display:flex;flex-direction:column;min-height:100vh;margin:0 auto;width:80%;max-width:960px;padding-top:10px;font-family:"さつき源代明朝 Medium",serif;}
-	body.dark{background-color:#222;color:#fff;}
-	body.dark a{color:#d6a567;}
-	h1,h2,h3,h4,h5,h6,button{font-family:"Hiragino Kaku Gothic Pro","Meiryo",sans-serif;font-weight:500;}
-	.modeChange{margin-bottom:10px;}
-	#modeBtn{display:block;margin-left:auto;appearance:none;-webkit-appearance:none;border:1px solid currentColor;border-radius:5px;background-color:#000;box-shadow:none;color:#fff;font-size:10px;line-height:1;padding:6px 10px;cursor:pointer;transition:background-color 0.3s ease,color 0.3s ease;}
-	#modeBtn:hover{background-color:#2f2f2f;}
-	#modeBtn:focus-visible{outline:2px solid currentColor;outline-offset:3px;}
-	body.dark #modeBtn{background-color:#ff0;color:#000;}
-	body.dark #modeBtn:hover{background-color:#e6e600;}
-	footer{margin-top:auto;padding-bottom:20px;text-align:center;}
-	@media screen and (max-width:480px){body{width:90%;}h2{margin-top:30px;}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HCB — Official web portal</title>
+  <meta name="description" content="HCBのオフィシャルポータル。音楽、映像、そして日々の探求。">
+  <meta name="theme-color" content="#101010">
+  <meta name="color-scheme" content="dark light">
+  <link rel="me" href="https://social.vivaldi.net/@bearsfactory">
+  <script>
+    try { const saved = localStorage.getItem('hcb-theme'); if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved; } catch {}
+  </script>
+  <style>
+    :root{--bg:#101010;--surface:#171717;--text:#f0eee9;--muted:#a4a29e;--line:#343434;--accent:#ef4a3e;--header:rgba(16,16,16,.94);color-scheme:dark}
+    :root[data-theme="light"]{--bg:#eeece6;--surface:#e4e1da;--text:#191919;--muted:#625f58;--line:#c9c5bb;--accent:#b62c24;--header:rgba(238,236,230,.94);color-scheme:light}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:6px}::selection{background:var(--accent);color:#fff}.wrap{width:min(1280px,calc(100% - 96px));margin:auto}.skip{position:fixed;top:-100px;left:20px;z-index:10;padding:15px;background:var(--text);color:var(--bg)}.skip:focus{top:12px}
+    header{border-bottom:1px solid var(--line);background:var(--header)}.header-inner{height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:30px;letter-spacing:-2px;font-weight:900;display:flex;align-items:center;gap:12px}.brand i{width:7px;height:7px;background:var(--accent);border-radius:50%}.header-right{display:flex;align-items:center;gap:42px}.portal-label,.eyebrow,.meta,.section-kicker,.footer-meta{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}.portal-label{color:var(--muted)}#modeBtn{display:flex;gap:10px;align-items:center;padding:11px 15px;border:1px solid var(--line);border-radius:30px;background:transparent;color:var(--text);font-size:11px;cursor:pointer}#modeBtn:hover{border-color:var(--text)}.theme-icon{font-size:16px;line-height:1}
+    .hero{padding:65px 0 0}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted)}.eyebrow:before{content:"";width:24px;height:1px;background:var(--accent)}.hero-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin:27px 0 38px}h1{margin:0;font-size:clamp(64px,8.2vw,118px);line-height:.94;letter-spacing:-.075em;font-weight:800}h1 span{color:var(--accent)}.hero-description{max-width:270px;margin:0 0 4px;font-size:13px;line-height:1.9;color:var(--muted)}.artwork{margin:0;position:relative;background:#000;border:1px solid #252525;overflow:hidden}.artwork img{width:100%;height:auto;display:block}.artwork figcaption{position:absolute;left:24px;bottom:20px;color:#b4b4b4;font:10px ui-monospace,monospace;letter-spacing:.12em}.artwork-marker{position:absolute;right:24px;bottom:20px;color:#b4b4b4;font:10px ui-monospace,monospace}.hero-bottom{display:flex;align-items:center;justify-content:space-between;padding:21px 0;color:var(--muted);border-bottom:1px solid var(--line)}.explore-link{font-size:11px;letter-spacing:.12em;display:flex;gap:22px;align-items:center}.explore-link:hover{color:var(--accent)}
+    .directory{padding:68px 0 80px;display:grid;grid-template-columns:1fr 2fr;gap:60px}.section-kicker{color:var(--accent);margin:0 0 19px}h2{font-size:32px;letter-spacing:-.04em;margin:0 0 18px}.section-description{font-size:13px;line-height:1.9;color:var(--muted);margin:0}.directory-list{border-top:1px solid var(--line)}.entry{display:grid;grid-template-columns:32px 1fr 26px;align-items:center;gap:20px;min-height:104px;padding:22px 8px;border-bottom:1px solid var(--line);transition:padding .2s,background .2s}.entry[href]:hover{padding-left:18px;background:var(--surface)}.entry-number{font:11px ui-monospace,monospace;color:var(--muted);align-self:start;padding-top:9px}.entry-heading{display:flex;align-items:center;gap:14px}.entry h3{font-size:27px;letter-spacing:-.04em;font-weight:500;margin:0}.entry p{margin:7px 0 0;font-size:12px;line-height:1.6;color:var(--muted)}.entry-arrow{font-size:23px;font-weight:300;transition:transform .2s}.entry:hover .entry-arrow{transform:translate(3px,-3px);color:var(--accent)}.badge{font:9px ui-monospace,monospace;letter-spacing:.06em;border:1px solid var(--line);padding:4px 7px;color:var(--muted)}.entry-disabled h3{color:var(--muted)}footer{border-top:1px solid var(--line)}.footer-inner{min-height:105px;display:flex;align-items:center;justify-content:space-between;gap:24px}.footer-brand{font-size:22px;font-weight:800;letter-spacing:-1px}.footer-meta{color:var(--muted);font-size:10px}.social{font-size:12px;display:flex;gap:18px}.social:hover{color:var(--accent)}
+    @media(min-width:1600px){.hero{padding-top:85px}}@media(max-width:800px){.wrap{width:calc(100% - 48px)}.header-inner{height:76px}.header-right{gap:18px}.hero{padding-top:44px}.hero-heading{display:block;margin:26px 0 30px}h1{font-size:clamp(58px,12vw,94px)}.hero-description{max-width:none;margin-top:23px}.directory{grid-template-columns:1fr;gap:30px;padding:48px 0 56px}.directory-intro{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.section-kicker{grid-column:1/-1}h2{font-size:28px}.section-description{align-self:center}.artwork figcaption,.artwork-marker{bottom:12px;font-size:8px}.artwork figcaption{left:12px}.artwork-marker{right:12px}}@media(max-width:480px){.wrap{width:calc(100% - 36px)}.portal-label{display:none}.hero-description{font-size:12px}.meta{font-size:9px;letter-spacing:.08em}.explore-link{font-size:9px;gap:12px}.directory-intro{display:block}.entry{gap:12px;min-height:100px;grid-template-columns:24px 1fr 22px}.entry h3{font-size:26px}.entry p{font-size:11px}.footer-inner{flex-wrap:wrap;padding:26px 0;gap:18px}.footer-meta{order:3;width:100%;font-size:9px}.artwork img{min-height:205px;object-fit:cover;object-position:center}.artwork figcaption{display:none}.badge{font-size:8px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
 </head>
 <body>
-	<div class="modeChange"><button id="modeBtn">Enter the Darkness</button></div>
-	<h1>hcb</h1>
-	<p style="font-size:14px;margin-bottom:10px;">Official web portal</p>
-	<script>
-		const modeBtn=document.getElementById('modeBtn');
-		
-		modeBtn.addEventListener('click',function(){
-		document.body.classList.toggle('dark');
-		const isDark=document.body.classList.contains('dark');
-		modeBtn.textContent=isDark?'Enter the Light':'Enter the Darkness';
-		});
-	</script>
-<hr style="margin:0px 0px 10px 0px">
-<div><a href="music.html">Music</a>　/　<a href="movie.html">Movie</a>　/　<a href="prophet.html">Prophet</a>　/　<a href="vim.html">Vim</a></div>
-<footer><small>© 2026 hcb</small></footer>
+  <a class="skip" href="#main">メインコンテンツへ</a>
+  <header><div class="wrap header-inner">
+    <a class="brand" href="./" aria-label="HCB ホーム">HCB<i aria-hidden="true"></i></a>
+    <div class="header-right"><span class="portal-label">Official web portal</span><button id="modeBtn" type="button" aria-label="ライトモードに切り替える"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Enter the Light</span></button></div>
+  </div></header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow">Independent creation & exploration</div>
+      <div class="hero-heading"><h1 id="hero-title">Beyond the<span>.</span><br>ordinary.</h1><p class="hero-description">音をつくる。世界に触れる。<br>好奇心の、その先へ。<br>HCBのクリエイティブポータル。</p></div>
+      <figure class="artwork"><img src="img/HCB_Crow_Main.webp" width="7852" height="2620" alt="赤いHCBの文字を背に、剣を携えて佇む黒衣のカラス" fetchpriority="high"><figcaption>PROJECT HCB / CROW</figcaption><span class="artwork-marker" aria-hidden="true">01 — VISUAL IDENTITY</span></figure>
+      <div class="hero-bottom"><span class="meta">Sound / Vision / Exploration</span><a class="explore-link" href="#explore">EXPLORE HCB <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="directory" id="explore" aria-labelledby="explore-title">
+      <div class="directory-intro"><p class="section-kicker">01 / Explore</p><h2 id="explore-title">創作と探求の記録。</h2><p class="section-description">音楽、映像、言葉と道具。<br>それぞれの入口から、HCBの世界へ。</p></div>
+      <div class="directory-list">
+        <a class="entry" href="MUSIC_LABORATORY/"><span class="entry-number">01</span><div><div class="entry-heading"><h3>Music</h3></div><p>音楽とサウンドの実験室</p></div><span class="entry-arrow" aria-hidden="true">↗</span></a>
+        <div class="entry entry-disabled"><span class="entry-number">02</span><div><div class="entry-heading"><h3>Movie</h3><span class="badge">COMING SOON</span></div><p>映像コンテンツは準備中です</p></div><span class="entry-arrow" aria-hidden="true">—</span></div>
+        <a class="entry" href="https://social.vivaldi.net/@bearsfactory" rel="me"><span class="entry-number">03</span><div><div class="entry-heading"><h3>About HCB</h3></div><p>プロフィールと日々の発信 · Mastodon</p></div><span class="entry-arrow" aria-hidden="true">↗</span></a>
+        <a class="entry" href="vim.html"><span class="entry-number">04</span><div><div class="entry-heading"><h3>Vim</h3></div><p>思考をかたちにする、エディターの記録</p></div><span class="entry-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="footer-brand" href="./">HCB.</a><small class="footer-meta">© 2026 HCB / Official web portal</small><a class="social" href="https://social.vivaldi.net/@bearsfactory" rel="me">Mastodon <span aria-hidden="true">↗</span></a></div></footer>
+  <script>
+    const modeBtn = document.getElementById('modeBtn');
+    function updateThemeButton() {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      modeBtn.querySelector('.theme-label').textContent = dark ? 'Enter the Light' : 'Enter the Darkness';
+      modeBtn.querySelector('.theme-icon').textContent = dark ? '☼' : '☾';
+      modeBtn.setAttribute('aria-label', dark ? 'ライトモードに切り替える' : 'ダークモードに切り替える');
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#101010' : '#eeece6';
+    }
+    modeBtn.addEventListener('click', () => {
+      const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem('hcb-theme', theme); } catch {}
+      updateThemeButton();
+    });
+    updateThemeButton();
+  </script>
 </body>
 </html>

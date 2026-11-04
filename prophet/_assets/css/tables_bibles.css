@@ -19,7 +19,7 @@
 /*Audio*/
 .shadegaby2 li{
   border-bottom: 1px dotted #ccc; 
-  list-style-image: url('../img/audio-headphones.png' ); 
+  list-style-image: url('../img/audio-headphones.webp' ); 
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/
 }
@@ -35,35 +35,35 @@
 
 .shadegaby3 li{
 	border-bottom: 1px dotted #ccc;
- list-style-image: url('../img/openbook.png' ); 
+ list-style-image: url('../img/openbook.webp' ); 
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/
  }
 
 .shadegaby4 li{
 	border-bottom: 1px dotted #ccc;
-  list-style-image: url('../img/multi-2.png' ); 
+  list-style-image: url('../img/multi-2.webp' ); 
    font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/
 }
 
 .shadegaby5 li{
 	border-bottom: 1px dotted #ccc;
-  list-style-image: url('../img/page.png' );
+  list-style-image: url('../img/page.webp' );
  font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/  
 }
 
 .shadegaby6 li{
 	border-bottom: 1px dotted #ccc;
-  list-style-image: url('../img/download.png' );
+  list-style-image: url('../img/download.webp' );
    font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/
 }
 
 .shadegaby7 li{
 	border-bottom: 1px dotted #ccc;
-  list-style-image: url('../img/www.png' );
+  list-style-image: url('../img/www.webp' );
    font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   /*border-bottom: 3px solid #ccc;*/
 }
@@ -155,37 +155,37 @@ li:last-child {
 .shadetabs2 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 3px solid #ccc;
-  list-style-image: url('../img/audio-headphones.png' ); 
+  list-style-image: url('../img/audio-headphones.webp' ); 
 }
 
 .shadetabs3 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
- list-style-image: url('../img/openbook.png' ); 
+ list-style-image: url('../img/openbook.webp' ); 
  }
 
 .shadetabs4 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
-  list-style-image: url('../img/multi-2.png' ); 
+  list-style-image: url('../img/multi-2.webp' ); 
 }
 /*this is for resources:*/
 .shadetabs5 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 1px solid #f1f1f1;
-  list-style-image: url('../img/page.png' ); 
+  list-style-image: url('../img/page.webp' ); 
 }
 
 .shadetabs6 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
-  list-style-image: url('../img/download.png' );
+  list-style-image: url('../img/download.webp' );
 }
 
 .shadetabs7 li{
   font: 400 125%/2.0 Helvetica, Arial, Verdana, sans-serif;
   border-bottom: 3px solid #ccc;
-  list-style-image: url('../img/www.png' );
+  list-style-image: url('../img/www.webp' );
 }
 li:last-child {
   border: none;

@@ -1,0 +1,6 @@
+Tool: built-in image_gen
+Hero prompt:
+undefined
+
+Portrait prompt:
+undefined

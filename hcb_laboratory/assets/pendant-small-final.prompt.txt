@@ -1,0 +1,5 @@
+Tool: built-in image_gen
+Hero:
+undefined
+Portrait:
+Edit target Image 1: add a VERY TINY silver oval pendant necklace to Sola at left. Image 1 has no necklace: use Image 2 ONLY as design reference. Image 2 pendant is MUCH TOO LARGE. New oval pendant must be just 10 pixels WIDE by 15 pixels TALL on a 1341 pixel wide output, centered x405 y505 approximately. Tiny understated charm, only about one quarter of one red HCB letter's height, NOT a large medallion. This exact small scale is the PRIMARY requirement. Silver chain follows a V from neck sides down to x405 y485, same chain length as Image 2; tiny pendant hangs at its end. The charm is an oxidized silver devotional oval with miniature robed figure and engraved rim; details may be simplified to keep it TINY. Preserve all other pixels/composition, both full-body character positions, white background and original 992:868 aspect ratio. Do NOT reproduce the large pendant from reference. Small 10x15 pixel charm only.

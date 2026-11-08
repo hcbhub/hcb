@@ -6,7 +6,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 /* Keep the type specimen within narrow screens without clipping the letters. */
 .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.hero-copy{min-width:0}
-@media(max-width:720px){.hero{grid-template-columns:minmax(0,1fr)}.hero h1{font-size:clamp(54px,17vw,100px)}.hero h1>span{margin-left:.55em}}
+@media(max-width:720px){.hero{grid-template-columns:minmax(0,1fr)}.hero h1{font-size:clamp(48px,17vw,100px)}.hero h1>span{margin-left:.55em}}
 @media(min-width:721px) and (max-width:1050px){.hero h1{font-size:clamp(61px,8.2vw,89px)}}
 @media(max-width:720px){.glyph-layout{grid-template-columns:minmax(0,1fr)}.glyph-board{min-width:0;font-size:clamp(28px,9.5vw,42px);letter-spacing:.12em}}
 @media(max-width:380px){.hero-buttons{flex-wrap:wrap;gap:15px}.hero-buttons .button{min-width:200px}}
@@ -36,4 +36,47 @@
  .story-paper{width:90%}
  .story-paper p{top:40px;right:20px;bottom:35px;left:38px}
  .story-paper>small{left:14px;top:25px;font-size:10px}
+}
+
+.breadcrumbs {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 24px;
+  font: 600 11px/26px ui-monospace, monospace;
+  letter-spacing: .06em;
+}
+
+.breadcrumbs > * {
+  padding: 0 19px 0 20px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%);
+}
+
+.breadcrumbs > :first-child {
+  padding-left: 13px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+}
+
+.breadcrumbs a {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  background: #874536;
+  text-decoration: underline;
+}
+
+.breadcrumbs [aria-current="page"] {
+  background: #e6dfd4;
+}
+
+@media (max-width: 720px) {
+  .breadcrumbs {
+    margin-bottom: 18px;
+    font-size: 10px;
+  }
 }

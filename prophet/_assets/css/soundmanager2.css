@@ -62,7 +62,7 @@ ul.graphic li a.sm2_link {
 	line-height: 100%;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background-image:url(../img/audio-headphones.png);
+	background-image:url(../img/audio-headphones.webp);
 	background-position:7px 50%;
 	background-repeat:no-repeat;
 }
@@ -78,7 +78,7 @@ ul.graphic li a.sm2_link {
 
 ul.graphic li a.sm2_paused:hover,
 ul.graphic li a.sm2_link:hover {
-	background:#E2DCCF url(../img/audio-play.png) no-repeat 7px 50%;
+	background:#E2DCCF url(../img/audio-play.webp) no-repeat 7px 50%;
 	background-color:#E2DCCF;
 	color:#9D261D;
 	
@@ -86,26 +86,26 @@ ul.graphic li a.sm2_link:hover {
 
 ul.graphic li a.sm2_link:hover {
 	/* default hover color, if you'd like.. */
-	background:#9D261D url(../img/audio-play.png) no-repeat 7px 50%;
+	background:#9D261D url(../img/audio-play.webp) no-repeat 7px 50%;
 	background-color:#9D261D;
 	color:#FEFEFC;
 }
 
 ul.graphic li a.sm2_paused {
-	background:#999 url(../img/audio-pause.png) no-repeat 7px 50%;
+	background:#999 url(../img/audio-pause.webp) no-repeat 7px 50%;
 	background-color:#999;
 	color:#FEFEFC;
 }
 
 ul.graphic li a.sm2_paused:hover {
-	background:#666 url(../img/audio-play.png) no-repeat 7px 50%;
+	background:#666 url(../img/audio-play.webp) no-repeat 7px 50%;
 	background-color:#666;
 	color:#FEFEFC;
 }
 
 ul.graphic li a.sm2_playing,
 ul.graphic li a.sm2_playing:hover {
-	background:#9D261D url(../img/audio-pause.png) no-repeat 7px 50%;
+	background:#9D261D url(../img/audio-pause.webp) no-repeat 7px 50%;
 	background-color:#9D261D;
 	text-decoration:none;
 	color:#FEFEFC;
@@ -198,7 +198,7 @@ ul.playlist li {
 	-o-transition-duration: 0.15s;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background-image:url(../img/audio-headphones.png);
+	background-image:url(../img/audio-headphones.webp);
 	background-position:10px 50%;
 	background-repeat:no-repeat;
 
@@ -232,11 +232,11 @@ ul.playlist li:hover a {
 
 ul.playlist li.sm2_playing,
 ul.playlist li.sm2_playing:hover {
-	background:#cbc0a9 url(../img/audio-play.png) no-repeat 10px 50%;
+	background:#cbc0a9 url(../img/audio-play.webp) no-repeat 10px 50%;
 }
 
 ul.playlist li.sm2_paused {
-	background:#E2DCCF url(../img/audio-pause.png) no-repeat 10px 50%;
+	background:#E2DCCF url(../img/audio-pause.webp) no-repeat 10px 50%;
 }
 
 ul.playlist li.sm2_playing:hover a,

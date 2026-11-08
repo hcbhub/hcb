@@ -1,0 +1,4 @@
+Tool: built-in image_gen
+Both images use this prompt:
+undefined
+Portrait additional constraint: Preserve exact full-body character placements and white background, original aspect ratio, for existing CSS portrait crops.

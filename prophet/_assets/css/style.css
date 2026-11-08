@@ -167,19 +167,19 @@ a.chap:hover {
 	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.0); /*change to 0,0,0,0.8 for margin*/
 }
 .twitter-hover_2 {
-	background-image: url('../img/twitter-hover_2.png');
+	background-image: url('../img/twitter-hover_2.webp');
 }
 .facebook-hover_2 {
-	background-image: url('../img/facebook-hover_2.png');
+	background-image: url('../img/facebook-hover_2.webp');
 }
 .google-hover_2 {
-	background-image: url('../img/google-hover_2.png');
+	background-image: url('../img/google-hover_2.webp');
 }
 .linkedin-hover_2 {
 	background-image: url('../img/linkedin-hover_2.png');
 }
 .email-hover_2 {
-	background-image: url('../img/email-hover_2.png');
+	background-image: url('../img/email-hover_2.webp');
 }
 
 
@@ -386,43 +386,43 @@ margin: 0;
 }
 
 ul.list-bibles {
-list-style-image: url('../img/book.png' ); 
+list-style-image: url('../img/book.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-audio {
-list-style-image: url('../img/audio-headphones.png' ); 
+list-style-image: url('../img/audio-headphones.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 
 	}
 ul.list-verses {
-list-style-image: url('../img/openbook.png' );
+list-style-image: url('../img/openbook.webp' );
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-multi {
-list-style-image: url('../img/multi.png' ); 
+list-style-image: url('../img/multi.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-multi-2 {
-list-style-image: url('../img/multi-2.png' ); 
+list-style-image: url('../img/multi-2.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-page {
-list-style-image: url('../img/page.png' ); 
+list-style-image: url('../img/page.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-download {
-list-style-image: url('../img/download.png' ); 
+list-style-image: url('../img/download.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}
 ul.list-www {
-list-style-image: url('../img/www.png' ); 
+list-style-image: url('../img/www.webp' ); 
 /* [disabled nov2017]display: inline; */
 padding-left: 2.0em /* [added nov2017]display: inline; */
 	}	

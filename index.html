@@ -18,6 +18,14 @@
     @media(min-width:1600px){.hero{padding-top:85px}}@media(max-width:800px){.wrap{width:calc(100% - 48px)}.header-inner{height:76px}.hero{padding-top:44px}.hero-heading{display:block;margin:26px 0 30px}h1{font-size:clamp(58px,12vw,94px)}.hero-description{max-width:none;margin-top:23px}.directory{grid-template-columns:1fr;gap:30px;padding:48px 0 56px}.directory-intro{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.section-kicker{grid-column:1/-1}h2{font-size:28px}.section-description{align-self:center}.artwork figcaption,.artwork-marker{bottom:12px;font-size:8px}.artwork figcaption{left:12px}.artwork-marker{right:12px}}@media(max-width:480px){.wrap{width:calc(100% - 36px)}.portal-label{display:none}.hero-description{font-size:12px}.meta{font-size:9px;letter-spacing:.08em}.explore-link{font-size:9px;gap:12px}.directory-intro{display:block}.entry{gap:12px;min-height:100px;grid-template-columns:24px 1fr 22px}.entry h3{font-size:26px}.entry p{font-size:11px}.footer-inner{flex-wrap:wrap;padding:26px 0;gap:18px}.footer-meta{order:3;width:100%;font-size:9px}.artwork{width:100%}.artwork figcaption{display:none}.badge{font-size:8px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
     .site-title { margin: 0; }
     .entry-heading { flex-wrap: wrap; row-gap: 4px; }
+
+    @media (max-width: 700px) {
+      .artwork img {
+        aspect-ratio: 13 / 7;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   </style>
 </head>
 <body>

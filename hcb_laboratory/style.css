@@ -95,6 +95,13 @@
 }
 
 @media (max-width: 700px) {
+  .hero .lab-scene img {
+    aspect-ratio: 13 / 7;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .font-visual {
     min-height: clamp(235px, 68vw, 355px);
     padding-inline: 20px;
